@@ -140,6 +140,7 @@ class OHLCV:
                         for ma in Indicators.MA.value:
                             df[ma] = MA(
                                 df["close"], timeperiod=int(ma.split("_")[1]))
+    
                     # OBV
                     elif indicator == Indicators.OBV:
                         df[indicator.value] = OBV(df["close"], df["volume"])

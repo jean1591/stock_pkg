@@ -1,0 +1,1 @@
+from .strategy_handler import p_ma_squeeze
