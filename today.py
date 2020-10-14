@@ -10,7 +10,12 @@ for crypto in cryptos:
 
 
 for key, df in enumerate(df_list):
+  print(f"{cryptos[key]}")
+  print(df.tail())
+
   c_d_last_row = df.iloc[-1].to_dict()
 
   if c_d_last_row["order_type"] in ["buy", "sell"]:
-    print(f"Send {c_d_last_row['order_type']} signal => {cryptos[key]}")
+    print(f"{c_d_last_row['order_type']} signal => {cryptos[key]}")
+  
+  print(f"\n\n{'=====' * 15}\n")

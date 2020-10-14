@@ -1,6 +1,11 @@
 import numpy as np
 
 def p_ma_squeeze(stock_df):
+    # Delete useless cols
+    cols = ["close", "ma_20", "ma_50"]
+    stock_df = stock_df.loc[:, cols]
+
+    # Add p_ma cols
     stock_df["p_ma"] = (100 - (stock_df["ma_50"] / stock_df["ma_20"] * 100)).round(decimals=2)
 
     buy = (

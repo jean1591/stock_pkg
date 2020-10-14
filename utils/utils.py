@@ -18,8 +18,6 @@ def get_stock(ticker, interval=Interval.DAY, window=Window.TWO_YEARS, indicators
   """
   try:
     c_df = OHLCV.fetch(ticker, interval=interval, window=window, indicators=indicators)
-    cols = ["close", "ma_20", "ma_50"]
-    c_df = c_df[cols]
     return p_ma_squeeze(c_df)
   except Exception as e:
     print(e)
