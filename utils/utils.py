@@ -1,26 +1,8 @@
 # FILES
 from stock import OHLCV, Interval, Window, Indicators
-from strategy import p_ma_squeeze
 
 # PACKAGES
 import math
-
-
-def get_stock(ticker, interval=Interval.DAY, window=Window.TWO_YEARS, indicators=[]):
-  """
-  Return a pandas.DataFrame object with MA indicators
-
-  Args:
-      ticker (string): Ticker to fetch - Must be formatted for Yahoo Finance API
-
-  Returns:
-      pandas.DataFrame: Dataframe with close, ma_20, ma_50 and p_ma values for last two years
-  """
-  try:
-    c_df = OHLCV.fetch(ticker, interval=interval, window=window, indicators=indicators)
-    return p_ma_squeeze(c_df)
-  except Exception as e:
-    print(e)
 
 
 def check_wallet(wallet, close, qty):
@@ -91,7 +73,7 @@ def undivide_crypto(cryptos, portfolio, divisor):
 def display_results(cryptos, initial_wallet, wallet, portfolio, portfolio_value, overall_value, roi):
   print(f"Starting analysis on {', '.join(cryptos)}:")
   print(f"Wallet start: €{round(initial_wallet, 2)}")
-  print(f"Wallet at end: €{round(wallet, 2)}")
+  print(f"Wallet end: €{round(wallet, 2)}")
   print(f"Portfolio: {portfolio}")
   print(f"Portfolio value: €{round(portfolio_value, 2)}")
   print(f"Wallet + Portfolio value: €{round(overall_value, 2)}")

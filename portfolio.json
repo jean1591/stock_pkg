@@ -1,0 +1,103 @@
+[
+	{
+		"account": "PEA",
+		"stocks": [
+			{
+				"name": "axa",
+				"ticker": "CS",
+				"market": "PA",
+				"quantity": 5,
+				"price": 17.01
+			},
+			{
+				"name": "casino",
+				"ticker": "CO",
+				"market": "PA",
+				"quantity": 4,
+				"price": 23.01
+			},
+			{
+				"name": "coface",
+				"ticker": "COFA",
+				"market": "PA",
+				"quantity": 15,
+				"price": 6.5
+			},
+			{
+				"name": "eutelsat",
+				"ticker": "ETL",
+				"market": "PA",
+				"quantity": 11,
+				"price": 8.41
+			},
+			{
+				"name": "metropole tv",
+				"ticker": "MMT",
+				"market": "PA",
+				"quantity": 30,
+				"price": 9.73
+			},
+			{
+				"name": "natixis",
+				"ticker": "KN",
+				"market": "PA",
+				"quantity": 147,
+				"price": 2.04
+			},
+			{
+				"name": "societe generale",
+				"ticker": "GLE",
+				"market": "PA",
+				"quantity": 23,
+				"price": 12.34
+			}
+		]
+	},
+	{
+		"account": "CTO",
+		"stocks": [
+			{
+				"name": "air france klm",
+				"ticker": "AF",
+				"market": "PA",
+				"quantity": 3,
+				"price": 4.63
+			},
+			{
+				"name": "eutelsat",
+				"ticker": "ETL",
+				"market": "PA",
+				"quantity": 5,
+				"price": 10.24
+			},
+			{
+				"name": "klepierre",
+				"ticker": "LI",
+				"market": "PA",
+				"quantity": 5,
+				"price": 17.35
+			},
+			{
+				"name": "natixis",
+				"ticker": "KN",
+				"market": "PA",
+				"quantity": 6,
+				"price": 2.4
+			},
+			{
+				"name": "nexity",
+				"ticker": "NXI",
+				"market": "PA",
+				"quantity": 2,
+				"price": 29.14
+			},
+			{
+				"name": "unibail rodamco westfield",
+				"ticker": "URW",
+				"market": "AS",
+				"quantity": 4,
+				"price": 46.73
+			}
+		]
+	}
+]

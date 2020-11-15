@@ -1,14 +1,19 @@
 # FILES
-from utils import get_stock
-from stock import Window, Indicators
+from stock import OHLCV, Interval, Window, Indicators
+from strategy import apply_strategy, p_ma_squeeze
+
+# PACKAGES
+from datetime import datetime
 
 
 cryptos = ["BTC-USD", "ETH-USD", "MIOTA-USD"]
 df_list = []
 for crypto in cryptos:
-  df_list.append(get_stock(crypto, window=Window.HALF_YEAR, indicators=[Indicators.MA]))
+  c_df = OHLCV.fetch(crypto, window=Window.TWO_YEARS, indicators=[Indicators.MA])
+  df_list.append(apply_strategy(c_df, p_ma_squeeze))
 
 
+print(f"REPORT: {datetime.now().strftime('%Y-%m-%d (%H:%M)')}")
 for key, df in enumerate(df_list):
   print(f"{cryptos[key]}")
   print(df.tail())

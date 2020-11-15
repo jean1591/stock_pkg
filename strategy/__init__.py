@@ -1,1 +1,1 @@
-from .strategy_handler import p_ma_squeeze
+from .strategy_handler import apply_strategy, p_ma_squeeze, p_ma_squeeze_short
